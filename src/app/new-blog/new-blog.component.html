@@ -10,7 +10,7 @@
               <div class="input-field col s12">
                 <input name="blogHeadingTitle" placeholder="Enter Blog Title Here" id="blogHeadTitle" type="text" minlength="5" maxlength="30" required  #blogHeadingTitle="ngModel" [(ngModel)]="blogTitle">
               </div>
-              <div *ngIf="blogHeadingTitle.errors & (blogHeadingTitle.dirty || blogHeadingTitle.touched)" class="alert alert-danger">
+              <div *ngIf="blogHeadingTitle.errors && (blogHeadingTitle.dirty || blogHeadingTitle.touched)" class="alert alert-danger">
                 <div [hidden]="!blogHeadingTitle.errors.required">
                   Blog Title is required!
                 </div>
@@ -24,7 +24,7 @@
               <div class="input-field col s12">
                 <textarea style="padding-bottom:0px" name="blogDesc" placeholder="Enter Blog Content Here" minlength="20" required id="blog_content" class="materialize-textarea" #blogDesc="ngModel" [(ngModel)]="blogContent"></textarea>
               </div>
-              <div *ngIf="blogDesc.errors & (blogDesc.dirty || blogDesc.touched)" class="alert alert-danger">
+              <div *ngIf="blogDesc.errors && (blogDesc.dirty || blogDesc.touched)" class="alert alert-danger">
                 <div [hidden]="!blogDesc.errors.required">
                   Blog Content is required!
                 </div>
