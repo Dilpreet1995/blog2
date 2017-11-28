@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="input-field col s6">
+
+    <input placeholder="Enter User Name" name="blogUserName" id="username" type="text" class="validate" #blogUserName="ngModel" [(ngModel)]="username">
+
+  </div>
+  <button style="color: bisque" class="  waves-effect waves-light btn displayButton"  (click)="getUserBlogs(username)">Search</button>
+</div>
+
+
+<div *ngFor="let blog of userBlogs; let i=index">
+  <p class="display">{{username}}'s blog number {{i+1}} </p>
+    <div class="row">
+      <div style="margin-left: 10%; width: 80%" class="col s12 m6">
+        <div class="card brown lighten-3">
+          <div class="card-content white-text">
+            <span class="card-title blogTitleDisplay">{{blog.blogTitle}}</span>
+            <p class="blogTextDisplay">{{blog.blogContent}}</p>
+          </div>
+          <div class="card-action">
+            <i class="material-icons">stars</i>{{blog.blogRating}}
+            <i class="material-icons">flag</i>{{blog.blogCategory}}
+            <i class="material-icons">thumbs_up_down</i>{{blog.blogLikes}}
+            <div class="card-action">
+              <button (click)="editBlog(blog.id)" class="btn-flat"><i class="material-icons">edit</i>Edit</button>
+              <button class="btn-flat" (click)="deleteSelectedBlog(blog.id)"><i class="material-icons">delete</i>Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,25 @@
+<div class="displayDesc" style="margin-left: 40%"> Top Rated Blogs</div>
+<div *ngIf="sortedBlogs">
+  <div *ngFor="let blogPost of sortedBlogs; let i=index">
+      <div *ngIf="blogPost.blogRating>=7">
+      <div class="row">
+        <div style="margin-left: 10%; width: 80%" class="col s12 m6">
+          <div class="card brown lighten-3">
+            <div class="card-content white-text">
+              <span class="card-title blogTitleDisplay">{{blogPost.blogTitle}}</span>
+              <p class="blogTextDisplay">{{blogPost.blogContent}}</p>
+            </div>
+            <div class="card-action">
+              <i class="material-icons">stars</i>{{blogPost.blogRating}}
+              <i class="material-icons">flag</i>{{blogPost.blogCategory}}
+              <i class="material-icons display">person</i>{{blogPost.blogLikes}}
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
+</div>
+</div>

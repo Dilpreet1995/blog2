@@ -1,0 +1,44 @@
+{
+  "blogs": [
+    {
+      "blogTitle": "Virat Kohli",
+      "blogContent": "The current indian team Captain",
+      "blogCategory": "Cricket",
+      "id": 1,
+      "blogUserID": 1,
+      "blogRating": 9
+    },
+    {
+      "blogTitle": "Ronaldo",
+      "blogContent": "Best Football Player ever in history",
+      "blogCategory": "Football",
+      "id": 2,
+      "blogUserID": 2,
+      "blogRating": 1
+    },
+    {
+      "blogTitle": "Federer",
+      "blogContent": "Best player ever in the history of the game",
+      "blogCategory": "Tennis",
+      "blogUserID": 2,
+      "blogRating": 10,
+      "id": 3
+    },
+    {
+      "blogTitle": "Raghunath",
+      "blogContent": "The goal scoring machine",
+      "blogCategory": "Hockey",
+      "blogUserID": 4,
+      "blogRating": 8,
+      "id": 4
+    },
+    {
+      "blogTitle": "rahane",
+      "blogContent": "Dependable Batsman of the Indian Team",
+      "blogCategory": "Cricket",
+      "blogUserID": 3,
+      "blogRating": 10,
+      "id": 5
+    }
+  ]
+}

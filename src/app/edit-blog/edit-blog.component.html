@@ -1,0 +1,63 @@
+<div style="margin-top:25px" class="container row">
+
+
+
+
+  <div *ngIf="sentBlog">
+    <div class="col s12 m6" style="width: 80%;margin-left: 15%">
+      <div class="card darken-1">
+        <div class="card-content ">
+          <div class="row">
+            <form #newBlogForm="ngForm" class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input name="blogHeadingTitle" placeholder="Enter Blog Title Here" id="blogHeadTitle" type="text" minlength="5" maxlength="30" required  #blogHeadingTitle="ngModel" [(ngModel)]="sentBlog.blogTitle">
+                </div>
+                <div *ngIf="blogHeadingTitle.errors && (blogHeadingTitle.dirty || blogHeadingTitle.touched)" class="alert alert-danger">
+                  <div [hidden]="!blogHeadingTitle.errors.required">
+                    Blog Title is required!
+                  </div>
+                  <div [hidden]="!blogHeadingTitle.errors.minlength">
+                    Title must be at least 5 characters long.
+                  </div>
+                  <div [hidden]="!blogHeadingTitle.errors.maxlength">
+                    Title cannot be more than 30 characters long.
+                  </div>
+                </div>
+                <div class="input-field col s12">
+                  <textarea style="padding-bottom:0px" name="blogDesc" placeholder="Enter Blog Content Here" minlength="20" required id="blog_content" class="materialize-textarea" #blogDesc="ngModel" [(ngModel)]="sentBlog.blogContent"></textarea>
+                </div>
+                <div *ngIf="blogDesc.errors && (blogDesc.dirty || blogDesc.touched)" class="alert alert-danger">
+                  <div [hidden]="!blogDesc.errors.required">
+                    Blog Content is required!
+                  </div>
+                  <div [hidden]="!blogDesc.errors.minlength">
+                    Blog Content must be at least 20 characters long.
+                  </div>
+                </div>
+              </div>
+              <div class="row category">
+                <p style="color: darkseagreen; margin-bottom: 18px; font-family: 'Book Antiqua'; font-size: large">Select Category for Your Blog</p>
+                <p><input name="blogTag" value="Cricket" type="radio" id="Cricket" required #blogTag="ngModel" [(ngModel)]="blogCategory"/><label for="Cricket">Cricket</label></p>
+                <p><input name="blogTag" value="Football" type="radio" id="Football" required #blogTag="ngModel" [(ngModel)]="blogCategory" /><label for="Football">Football</label></p>
+                <p><input name="blogTag" value="Tennis"  type="radio" id="Tennis" required #blogTag="ngModel" [(ngModel)]="blogCategory" /><label for="Tennis">Tennis</label></p>
+                <p><input name="blogTag" value="Hockey" type="radio" id="Hockey" required #blogTag="ngModel" [(ngModel)]="blogCategory" /><label for="Hockey">Hockey</label></p>
+              </div>
+              <div *ngIf="blogTag.errors">
+                <div [hidden]="!blogTag.errors.required">
+                  Blog Category Tag is required !
+                </div>
+              </div>
+              <br>
+            </form>
+            <div class="row center">
+              <button class="waves-effect waves-light btn displayButtonCreate" [disabled]="!newBlogForm.form.valid" (click)="editBlogPost(sentBlog.blogTitle,sentBlog.blogContent,blogCategory)">
+                <i class="material-icons middle">create</i>Yes,Create My Blog</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

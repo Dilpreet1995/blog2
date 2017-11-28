@@ -1,0 +1,22 @@
+.positionradio{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.positionbutton{
+  margin-left: -66px;
+  margin-top: -60px;
+}
+
+.display{
+  font-family: 'Spectral SC', serif;
+  font-size: 20px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948;
+}
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442;
+}

@@ -1,0 +1,23 @@
+<div *ngFor="let blog of blogs; let i=index;let user of users;">
+
+    <div class="row">
+      <div style="margin-left: 10%;width: 80%;color: bisque" class="col s12 m6">
+        <div class="card brown lighten-3">
+          <div class="card-content white-text">
+            <span class="card-title blogTitleDisplay">{{blog.blogTitle}}</span>
+            <p class="blogTextDisplay">{{blog.blogContent}}</p>
+          </div>
+          <div class="card-action">
+            <i class="material-icons">stars</i>{{blog.blogRating}}
+            <i class="material-icons">flag</i>{{blog.blogCategory}}
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+

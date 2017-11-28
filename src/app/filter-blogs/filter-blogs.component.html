@@ -1,0 +1,32 @@
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class=" input-field col s6">
+        <input name="blogfilter" placeholder="Search By Title or Category" id="blogcatfilter" [(ngModel)]="blogfilter" type="text" class=" validate" (input)="startFilter($event.target.value)">
+
+      </div>
+
+
+    </div>
+  </form>
+</div>
+<p id="filteredBlogs" class="display" style="visibility: hidden">Showing blogs Filtered By: {{blogfilter}}</p>
+<div *ngFor="let blog of filteredBlogs">
+  <div>
+    <div class="row" >
+      <div class="col s12 m6">
+        <div class="card brown lighten-3">
+          <div class="card-content white-text">
+            <span class="card-title blogTitleDisplay">{{blog.blogTitle}}</span>
+            <p class="blogTextDisplay">{{blog.blogContent}}</p>
+          </div>
+          <div class="card-action">
+            <i class="material-icons">stars</i>{{blog.blogRating}}
+            <i class="material-icons">flag</i>{{blog.blogCategory}}
+            <i class="material-icons">person</i>{{blog.blogLikes}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

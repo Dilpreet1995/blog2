@@ -1,0 +1,19 @@
+.myFont{
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+.logoImage{
+  height: 68px;
+  width:auto
+}
+
+body {
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}

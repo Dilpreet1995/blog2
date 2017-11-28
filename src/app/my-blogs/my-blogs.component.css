@@ -1,0 +1,15 @@
+.display{
+  margin-left: 213px;
+}
+
+.blogTitleDisplay{
+  font-family: 'Spectral SC', serif;
+  font-size: 25px;
+  color: black;
+}
+
+.blogTextDisplay{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  color: azure;
+}
